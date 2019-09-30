@@ -86,4 +86,32 @@ public class TestNotification {
     assertEquals(td3.getDr().getCustomerName(), "Tom");
   }
 
+
+  @Test
+  public void testNotificationProductName() {
+
+    centralSystem.registerObserver(vd1);
+    centralSystem.registerObserver(vd2);
+    centralSystem.registerObserver(td1);
+    centralSystem.registerObserver(td2);
+    centralSystem.registerObserver(td3);
+
+    centralSystem.setData(s1);
+
+    assertEquals(vd1.getDr().getProductName(), "Book");
+    assertEquals(vd2.getDr().getProductName(), "Book");
+    assertEquals(td1.getDr().getProductName(), "Book");
+    assertEquals(td2.getDr().getProductName(), "Book");
+    assertEquals(td3.getDr().getProductName(), "Book");
+
+    centralSystem.setData(s2);
+
+    assertEquals(vd1.getDr().getProductName(), "T-Shirt");
+    assertEquals(vd2.getDr().getProductName(), "T-Shirt");
+    assertEquals(td1.getDr().getProductName(), "T-Shirt");
+    assertEquals(td2.getDr().getProductName(), "T-Shirt");
+    assertEquals(td3.getDr().getProductName(), "T-Shirt");
+  }
+
+
 }
