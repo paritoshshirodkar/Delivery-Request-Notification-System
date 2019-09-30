@@ -1,9 +1,7 @@
 package edu.bu.met.cs665.Observable;
 
 /**
- *
  * This class represents a single delivery request.
- *
  */
 
 public class DeliveryRequest {
@@ -14,23 +12,18 @@ public class DeliveryRequest {
   private String addressLine2;
 
   /**
-   *
    * A default constructor.
-   *
    */
   public DeliveryRequest() {}
 
   /**
    * Create a delivery request based on attributes.
-   *
    * @param customerName name of the customer
    * @param productName name of the product
    * @param addressLine1 first line of the customer address
    * @param addressLine2 second line of the customer address
-   *
    */
-  public DeliveryRequest(String customerName, String productName, String addressLine1,
-      String addressLine2) {
+  public DeliveryRequest(String customerName, String productName, String addressLine1, String addressLine2) {
     this.customerName = customerName;
     this.productName = productName;
     this.addressLine1 = addressLine1;
@@ -39,7 +32,6 @@ public class DeliveryRequest {
 
   /**
    * Getter method for customer name.
-   *
    * @return customer name
    */
   public String getCustomerName() {
@@ -55,7 +47,6 @@ public class DeliveryRequest {
 
   /**
    * Getter method for product name.
-   *
    * @return product name
    */
   public String getProductName() {
@@ -71,7 +62,6 @@ public class DeliveryRequest {
 
   /**
    * Getter method for first line of customer address.
-   *
    * @return first line of the customer address
    */
   public String getAddressLine1() {
@@ -87,7 +77,6 @@ public class DeliveryRequest {
 
   /**
    * Getter method for second line of customer address.
-   *
    * @return second line of the customer address
    */
   public String getAddressLine2() {
