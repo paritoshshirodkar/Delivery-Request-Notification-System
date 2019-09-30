@@ -31,18 +31,6 @@ public class Main {
     // It is better to set this using java program arguments.
     PropertyConfigurator.configure("log4j.properties");
 
-//    // Let us create an object of the Main class.
-//    Main m = new Main();
-//
-//    logger.info(m.doIt());
-//
-//    logger.trace("Trace Message!");
-//    logger.debug("Debug Message!");
-//    logger.info("Info Message!");
-//    logger.warn("Warn Message!");
-//    logger.error("Error Message!");
-//    logger.fatal("Fatal Message!");
-
     ShopCentralSystem centralSystem = new ShopCentralSystem();
 
     ShopObserver vd1 = new VanDriver("vd1");
@@ -62,7 +50,7 @@ public class Main {
     DeliveryRequest ddr2 = new DeliveryRequest("Tom", "T-Shirt", "Comm. Ave.", "Boston");
 
 
-    Shop s1 = new Shop("Barnes and Nobel", ddr1);
+    Shop s1 = new Shop("Barnes and Noble", ddr1);
     Shop s2 = new Shop("Nike", ddr2);
 
 
@@ -72,12 +60,5 @@ public class Main {
 
 
   }
-
-
-
-//  private String doIt() {
-//    Person student = new Person("John", "Doe");
-//    return student.getLastName() + ',' + student.getLastName();
-//  }
 
 }
