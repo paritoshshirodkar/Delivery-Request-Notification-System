@@ -2,6 +2,10 @@ package edu.bu.met.cs665.Observable;
 
 import edu.bu.met.cs665.Observer.ShopObserver;
 
+/**
+ * This interface specifies an Observable or Subject in Observer Pattern.
+ */
+
 public interface Subject {
 
   /**
