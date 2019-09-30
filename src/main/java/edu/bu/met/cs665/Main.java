@@ -10,10 +10,9 @@ import edu.bu.met.cs665.example1.Person;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
-// import org.apache.log4j.PropertyConfigurator;
+import org.apache.log4j.PropertyConfigurator;
 
 import edu.bu.met.cs665.*;
-import org.apache.log4j.PropertyConfigurator;
 
 
 public class Main {
