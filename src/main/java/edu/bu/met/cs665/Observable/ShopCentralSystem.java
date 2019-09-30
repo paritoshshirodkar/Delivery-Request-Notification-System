@@ -31,7 +31,6 @@ public class ShopCentralSystem implements Subject {
 
   /**
    * Notifies all of the observers that are registered and added to the list.
-   *
    */
   @Override
   public void notifyObservers() {
@@ -43,6 +42,9 @@ public class ShopCentralSystem implements Subject {
 
   }
 
+  /**
+   * @param shop data for shop
+   */
   public void setData(Shop shop) {
 
     this.shop = shop;
@@ -52,6 +54,10 @@ public class ShopCentralSystem implements Subject {
 
   }
 
+  /**
+   * Getter method for shop data.
+   * @return shop data
+   */
   public Shop getData() {
     return this.shop;
   }
