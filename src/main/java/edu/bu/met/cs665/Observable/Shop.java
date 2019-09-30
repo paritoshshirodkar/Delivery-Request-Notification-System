@@ -27,7 +27,6 @@ public class Shop {
 
   /**
    * Getter method for name of the shop.
-   *
    * @return name of the shop
    */
   public String getShopName() {
@@ -43,7 +42,6 @@ public class Shop {
 
   /**
    * Getter method for delivery request.
-   *
    * @return delivery request associated with this shop
    */
   public DeliveryRequest getDeliveryRequest() {
