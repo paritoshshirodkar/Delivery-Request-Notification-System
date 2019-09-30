@@ -3,7 +3,7 @@ package edu.bu.met.cs665.Observer;
 /**
  * This class represents a single taxi driver.
  */
-public class TaxiDriver {
+public class TaxiDriver extends Driver {
 
   private String driverType;
 
@@ -30,6 +30,13 @@ public class TaxiDriver {
    */
   public void setDriverType(String driverType) {
     this.driverType = driverType;
+  }
+
+
+  @Override
+  public void displayNotification() {
+    System.out.println(" [Taxi driver Notification] " + " Driver Type: " + getDriverType() + " Driver Name: " + getDriverName() + " Shop Name: " + shop.getShopName() + " Customer Name: " + dr.getCustomerName() +
+        " Product Name: " + dr.getProductName() + " Address Line 1: " + dr.getAddressLine1() + " Address Line 2: " + dr.getAddressLine2());
   }
 
 
