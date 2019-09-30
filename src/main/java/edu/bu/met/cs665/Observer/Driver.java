@@ -11,7 +11,7 @@ public class Driver implements ShopObserver, DisplayNotification {
 
   @Override
   public void update(){
-    
+
   }
 
 
