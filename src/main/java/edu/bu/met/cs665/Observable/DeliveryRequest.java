@@ -14,7 +14,9 @@ public class DeliveryRequest {
   /**
    * A default constructor.
    */
-  public DeliveryRequest() {}
+  public DeliveryRequest() {
+
+  }
 
   /**
    * Create a delivery request based on attributes.
@@ -23,7 +25,8 @@ public class DeliveryRequest {
    * @param addressLine1 first line of the customer address
    * @param addressLine2 second line of the customer address
    */
-  public DeliveryRequest(String customerName, String productName, String addressLine1, String addressLine2) {
+  public DeliveryRequest(String customerName, String productName,
+      String addressLine1, String addressLine2) {
     this.customerName = customerName;
     this.productName = productName;
     this.addressLine1 = addressLine1;
@@ -39,6 +42,7 @@ public class DeliveryRequest {
   }
 
   /**
+   * Setter method.
    * @param customerName name of the customer
    */
   public void setCustomerName(String customerName) {
@@ -54,6 +58,7 @@ public class DeliveryRequest {
   }
 
   /**
+   * Setter method.
    * @param productName name of the product
    */
   public void setProductName(String productName) {
@@ -69,6 +74,7 @@ public class DeliveryRequest {
   }
 
   /**
+   * Setter method.
    * @param addressLine1 first line of the customer address
    */
   public void setAddressLine1(String addressLine1) {
@@ -84,6 +90,7 @@ public class DeliveryRequest {
   }
 
   /**
+   * Setter method.
    * @param addressLine2 second line of the customer address
    */
   public void setAddressLine2(String addressLine2) {
