@@ -45,10 +45,10 @@ public class Main {
 
     ShopCentralSystem centralSystem = new ShopCentralSystem();
 
-    ShopObserver vd1 = new VanDriver();
-    ShopObserver vd2 = new VanDriver();
-    ShopObserver td1 = new TaxiDriver();
-    ShopObserver td2 = new TaxiDriver();
+    ShopObserver vd1 = new VanDriver("vd1");
+    ShopObserver vd2 = new VanDriver("vd2");
+    ShopObserver td1 = new TaxiDriver("td1");
+    ShopObserver td2 = new TaxiDriver("td2");
 
     centralSystem.registerObserver(vd1);
     centralSystem.registerObserver(vd2);
