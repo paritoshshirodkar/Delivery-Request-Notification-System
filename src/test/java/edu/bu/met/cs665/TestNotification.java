@@ -114,4 +114,32 @@ public class TestNotification {
   }
 
 
+  @Test
+  public void testNotificationAddressLine1() {
+
+    centralSystem.registerObserver(vd1);
+    centralSystem.registerObserver(vd2);
+    centralSystem.registerObserver(td1);
+    centralSystem.registerObserver(td2);
+    centralSystem.registerObserver(td3);
+
+    centralSystem.setData(s1);
+
+    assertEquals(vd1.getDr().getAddressLine1(), "Comm. Ave.");
+    assertEquals(vd2.getDr().getAddressLine1(), "Comm. Ave.");
+    assertEquals(td1.getDr().getAddressLine1(), "Comm. Ave.");
+    assertEquals(td2.getDr().getAddressLine1(), "Comm. Ave.");
+    assertEquals(td3.getDr().getAddressLine1(), "Comm. Ave.");
+
+    centralSystem.setData(s2);
+
+    assertEquals(vd1.getDr().getAddressLine1(), "Comm. Ave.");
+    assertEquals(vd2.getDr().getAddressLine1(), "Comm. Ave.");
+    assertEquals(td1.getDr().getAddressLine1(), "Comm. Ave.");
+    assertEquals(td2.getDr().getAddressLine1(), "Comm. Ave.");
+    assertEquals(td3.getDr().getAddressLine1(), "Comm. Ave.");
+  }
+
+
+
 }
