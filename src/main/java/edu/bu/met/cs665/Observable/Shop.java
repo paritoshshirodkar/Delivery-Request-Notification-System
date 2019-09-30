@@ -1,6 +1,4 @@
 package edu.bu.met.cs665.Observable;
-import java.util.ArrayList;
-import java.util.List;
 import edu.bu.met.cs665.Observable.DeliveryRequest;
 
 /**
@@ -9,7 +7,7 @@ import edu.bu.met.cs665.Observable.DeliveryRequest;
 public class Shop {
 
   private String shopName;
-  private List<DeliveryRequest> deliveryRequestList = new ArrayList<DeliveryRequest>();
+  private DeliveryRequest deliveryRequest = new DeliveryRequest();
 
   /**
    * A default constructor.
@@ -19,12 +17,11 @@ public class Shop {
 
   /**
    * @param shopName name of the shop
-   * @param deliveryRequestList list of delivery requests associated with this shop
+   * @param deliveryRequest delivery request associated with this shop
    */
-  public Shop(String shopName,
-      List<DeliveryRequest> deliveryRequestList) {
+  public Shop(String shopName, DeliveryRequest deliveryRequest) {
     this.shopName = shopName;
-    this.deliveryRequestList = deliveryRequestList;
+    this.deliveryRequest = deliveryRequest;
   }
 
 
@@ -45,28 +42,19 @@ public class Shop {
   }
 
   /**
-   * Getter method for list of delivery requests.
+   * Getter method for delivery request.
    *
-   * @return list of delivery requests associated with this shop
+   * @return delivery request associated with this shop
    */
-  public List<DeliveryRequest> getDeliveryRequestList() {
-    return deliveryRequestList;
+  public DeliveryRequest getDeliveryRequest() {
+    return deliveryRequest;
   }
 
   /**
-   * @param deliveryRequestList list of delivery requests associated with this shop
+   * @param deliveryRequest delivery request associated with this shop
    */
-  public void setDeliveryRequestList(
-      List<DeliveryRequest> deliveryRequestList) {
-    this.deliveryRequestList = deliveryRequestList;
-  }
-
-  /**
-   * Method to add a new delivery request for this shop.
-   * @param dr delivery request for this shop
-   */
-  public void addDeliveryRequest(DeliveryRequest dr) {
-    this.deliveryRequestList.add(dr);
+  public void setDeliveryRequest(DeliveryRequest deliveryRequest) {
+    this.deliveryRequest = deliveryRequest;
   }
 
 }
