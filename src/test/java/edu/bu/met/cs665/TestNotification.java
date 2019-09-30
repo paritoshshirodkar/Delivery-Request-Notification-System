@@ -167,5 +167,31 @@ public class TestNotification {
     assertEquals(td3.getDr().getAddressLine2(), "Boston");
   }
 
+  @Test
+  public void testNotificationDriverName() {
+
+    centralSystem.registerObserver(vd1);
+    centralSystem.registerObserver(vd2);
+    centralSystem.registerObserver(td1);
+    centralSystem.registerObserver(td2);
+    centralSystem.registerObserver(td3);
+
+    centralSystem.setData(s1);
+
+    assertEquals(vd1.getDriverName(), "vd1");
+    assertEquals(vd2.getDriverName(), "vd2");
+    assertEquals(td1.getDriverName(), "td1");
+    assertEquals(td2.getDriverName(), "td2");
+    assertEquals(td3.getDriverName(), "td3");
+
+    centralSystem.setData(s2);
+
+    assertEquals(vd1.getDriverName(), "vd1");
+    assertEquals(vd2.getDriverName(), "vd2");
+    assertEquals(td1.getDriverName(), "td1");
+    assertEquals(td2.getDriverName(), "td2");
+    assertEquals(td3.getDriverName(), "td3");
+  }
+
 
 }
