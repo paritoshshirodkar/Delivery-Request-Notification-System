@@ -1,8 +1,19 @@
 package edu.bu.met.cs665;
 
+import edu.bu.met.cs665.Observable.DeliveryRequest;
+import edu.bu.met.cs665.Observable.Shop;
+import edu.bu.met.cs665.Observable.ShopCentralSystem;
+import edu.bu.met.cs665.Observer.ShopObserver;
+import edu.bu.met.cs665.Observer.TaxiDriver;
+import edu.bu.met.cs665.Observer.VanDriver;
 import edu.bu.met.cs665.example1.Person;
+import java.util.ArrayList;
+import java.util.List;
 import org.apache.log4j.Logger;
 // import org.apache.log4j.PropertyConfigurator;
+
+import edu.bu.met.cs665.*;
+
 
 public class Main {
 
@@ -20,25 +31,51 @@ public class Main {
     // It is better to set this using java program arguments.
     // PropertyConfigurator.configure("log4j.properties");
 
-    // Let us create an object of the Main class.
-    Main m = new Main();
+//    // Let us create an object of the Main class.
+//    Main m = new Main();
+//
+//    logger.info(m.doIt());
+//
+//    logger.trace("Trace Message!");
+//    logger.debug("Debug Message!");
+//    logger.info("Info Message!");
+//    logger.warn("Warn Message!");
+//    logger.error("Error Message!");
+//    logger.fatal("Fatal Message!");
 
-    logger.info(m.doIt());
+    ShopCentralSystem centralSystem = new ShopCentralSystem();
 
-    logger.trace("Trace Message!");
-    logger.debug("Debug Message!");
-    logger.info("Info Message!");
-    logger.warn("Warn Message!");
-    logger.error("Error Message!");
-    logger.fatal("Fatal Message!");
+    ShopObserver vd1 = new VanDriver();
+    ShopObserver vd2 = new VanDriver();
+    ShopObserver td1 = new TaxiDriver();
+    ShopObserver td2 = new TaxiDriver();
+
+    centralSystem.registerObserver(vd1);
+    centralSystem.registerObserver(vd2);
+    centralSystem.registerObserver(td1);
+    centralSystem.registerObserver(td2);
+
+    DeliveryRequest ddr1 = new DeliveryRequest("Paritosh", "Book", "Comm. Ave.", "Boston");
+    DeliveryRequest ddr2 = new DeliveryRequest("Paritosh", "T-Shirt", "Comm. Ave.", "Boston");
+
+
+    Shop s1 = new Shop("Barnes and Nobel", ddr1);
+    Shop s2 = new Shop("CVS", ddr2);
+
+    //DeliveryRequest ddr3 = new DeliveryRequest("Paritosh", "Jacket", "Comm. Ave.", "Boston");
+
+    centralSystem.setData(s1);
+    centralSystem.setData(s2);
+
+
 
   }
 
 
 
-  private String doIt() {
-    Person student = new Person("John", "Doe");
-    return student.getLastName() + ',' + student.getLastName();
-  }
+//  private String doIt() {
+//    Person student = new Person("John", "Doe");
+//    return student.getLastName() + ',' + student.getLastName();
+//  }
 
 }

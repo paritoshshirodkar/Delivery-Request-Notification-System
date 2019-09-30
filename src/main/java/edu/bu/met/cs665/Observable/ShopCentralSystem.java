@@ -10,7 +10,6 @@ import edu.bu.met.cs665.Observer.ShopObserver;
 public class ShopCentralSystem implements Subject {
 
   private Shop shop;
-  private DeliveryRequest dr;
 
   private List<ShopObserver> observerList = new ArrayList<ShopObserver>();
 
@@ -39,18 +38,22 @@ public class ShopCentralSystem implements Subject {
 
     // loop over the list and notify each Observer one by one
     for (ShopObserver shopObserver : observerList) {
-      shopObserver.update(shop.getShopName(), dr.getCustomerName(), dr.getProductName(), dr.getAddressLine1(), dr.getAddressLine2());
+      shopObserver.update(shop.getShopName(), shop.getDeliveryRequest());
     }
 
   }
 
-  public void setData(Shop shop, DeliveryRequest dr) {
+  public void setData(Shop shop) {
 
-    this.shop.addDeliveryRequest(dr);
+    this.shop = shop;
 
     // when we get new delivery request for a shop we notify observers.
     notifyObservers();
 
+  }
+
+  public Shop getData() {
+    return this.shop;
   }
 
 }
