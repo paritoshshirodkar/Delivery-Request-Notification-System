@@ -1,4 +1,5 @@
 package edu.bu.met.cs665.Observable;
+
 import edu.bu.met.cs665.Observable.DeliveryRequest;
 
 /**
@@ -12,10 +13,13 @@ public class Shop {
   /**
    * A default constructor.
    */
-  public Shop() {}
+  public Shop() {
+
+  }
 
 
   /**
+   * Setter method.
    * @param shopName name of the shop
    * @param deliveryRequest delivery request associated with this shop
    */
@@ -34,6 +38,7 @@ public class Shop {
   }
 
   /**
+   * Setter method.
    * @param shopName name of the shop
    */
   public void setShopName(String shopName) {
@@ -49,6 +54,7 @@ public class Shop {
   }
 
   /**
+   * Setter method.
    * @param deliveryRequest delivery request associated with this shop
    */
   public void setDeliveryRequest(DeliveryRequest deliveryRequest) {
