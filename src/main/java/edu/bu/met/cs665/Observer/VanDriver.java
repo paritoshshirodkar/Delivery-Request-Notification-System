@@ -28,6 +28,7 @@ public class VanDriver extends Driver {
 
 
   /**
+   * Setter method.
    * @param driverType type of the driver
    */
   public void setDriverType(String driverType) {
@@ -37,8 +38,9 @@ public class VanDriver extends Driver {
 
   @Override
   public void displayNotification() {
-    vanDriverLogger.info("\n [Van Driver Notification] " + "\n Driver Type: " + getDriverType() + "\n Driver Name: " + getDriverName() + "\n Shop Name: " + getShopName() + "\n Customer Name: " + dr.getCustomerName() +
-        "\n Product Name: " + dr.getProductName() + "\n Address Line 1: " + dr.getAddressLine1() + "\n Address Line 2: " + dr.getAddressLine2());
+    vanDriverLogger.info("\n [Van Driver Notification] " + "\n Driver Type: " + getDriverType() + "\n Driver Name: " + getDriverName()
+        + "\n Shop Name: " + getShopName() + "\n Customer Name: " + dr.getCustomerName()
+        + "\n Product Name: " + dr.getProductName() + "\n Address Line 1: " + dr.getAddressLine1() + "\n Address Line 2: " + dr.getAddressLine2());
 
   }
 

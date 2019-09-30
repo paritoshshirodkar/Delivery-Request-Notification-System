@@ -1,8 +1,9 @@
 package edu.bu.met.cs665.Observable;
 
+import edu.bu.met.cs665.Observer.ShopObserver;
 import java.util.ArrayList;
 import java.util.List;
-import edu.bu.met.cs665.Observer.ShopObserver;
+
 
 /**
  * This class represents the central system to manage the notifications for all the shops.
@@ -43,6 +44,7 @@ public class ShopCentralSystem implements Subject {
   }
 
   /**
+   * Setter method.
    * @param shop data for shop
    */
   public void setData(Shop shop) {

@@ -18,7 +18,9 @@ public class Driver implements ShopObserver, DisplayNotification {
   /**
    * A default constructor.
    */
-  public Driver() {}
+  public Driver() {
+
+  }
 
 
   /**
@@ -40,6 +42,7 @@ public class Driver implements ShopObserver, DisplayNotification {
 
 
   /**
+   * Setter method.
    * @param driverName name of the driver
    */
   public void setDriverName(String driverName) {
@@ -49,8 +52,9 @@ public class Driver implements ShopObserver, DisplayNotification {
 
   @Override
   public void displayNotification() {
-    driverLogger.info("\n [Basic Notification] " + "\n Driver Name: " + getDriverName() + "\n Shop Name: " + getShopName() + "\n Customer Name: " + dr.getCustomerName() +
-        "\n Product Name: " + dr.getProductName() + "\n Address Line 1: " + dr.getAddressLine1() + "\n Address Line 2: " + dr.getAddressLine2());
+    driverLogger.info("\n [Basic Notification] " + "\n Driver Name: " + getDriverName() + "\n Shop Name: " + getShopName()
+        + "\n Customer Name: " + dr.getCustomerName() + "\n Product Name: " + dr.getProductName()
+        + "\n Address Line 1: " + dr.getAddressLine1() + "\n Address Line 2: " + dr.getAddressLine2());
 
 
   }
@@ -75,6 +79,7 @@ public class Driver implements ShopObserver, DisplayNotification {
   }
 
   /**
+   * Setter method.
    * @param shopName name of the shop
    */
   public void setShopName(String shopName) {
@@ -90,6 +95,7 @@ public class Driver implements ShopObserver, DisplayNotification {
   }
 
   /**
+   * Setter method.
    * @param dr delivery request
    */
   public void setDr(DeliveryRequest dr) {

@@ -6,13 +6,14 @@ import edu.bu.met.cs665.Observable.ShopCentralSystem;
 import edu.bu.met.cs665.Observer.ShopObserver;
 import edu.bu.met.cs665.Observer.TaxiDriver;
 import edu.bu.met.cs665.Observer.VanDriver;
+import edu.bu.met.cs665.*;
 import edu.bu.met.cs665.example1.Person;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 
-import edu.bu.met.cs665.*;
+
 
 
 public class Main {
