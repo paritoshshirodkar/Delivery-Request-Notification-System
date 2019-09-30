@@ -6,7 +6,6 @@ package edu.bu.met.cs665.Observer;
 public class Driver implements ShopObserver, DisplayNotification {
 
   private String driverName;
-  private String driverType;
 
   /**
    * A default constructor.
@@ -18,11 +17,10 @@ public class Driver implements ShopObserver, DisplayNotification {
    * Creates a driver object based on attributes.
    *
    * @param driverName name of the driver
-   * @param driverType type of driver
+   *
    */
-  public Driver(String driverName, String driverType) {
+  public Driver(String driverName) {
     this.driverName = driverName;
-    this.driverType = driverType;
   }
 
 
@@ -43,23 +41,6 @@ public class Driver implements ShopObserver, DisplayNotification {
     this.driverName = driverName;
   }
 
-
-  /**
-   * Getter method for type of the driver.
-   *
-   * @return type of the driver
-   */
-  public String getDriverType() {
-    return driverType;
-  }
-
-
-  /**
-   * @param driverType type of the driver
-   */
-  public void setDriverType(String driverType) {
-    this.driverType = driverType;
-  }
 
   @Override
   public void displayNotification() {
