@@ -8,10 +8,10 @@ public class VanDriver extends Driver {
   private String driverType;
 
   /**
-   * A default constructor which calls the constructor of Driver class.
+   * A constructor which calls the constructor of Driver class.
    */
-  public VanDriver() {
-    super();
+  public VanDriver(String driverName) {
+    super(driverName);
     setDriverType("Van");
   }
 
@@ -35,10 +35,9 @@ public class VanDriver extends Driver {
 
   @Override
   public void displayNotification() {
-//    System.out.println(" [Van driver Notification] " + " Driver Type: " + getDriverType() + " Driver Name: " + getDriverName() + " Shop Name: " + shop.getShopName() + " Customer Name: " + dr.getCustomerName() +
-//        " Product Name: " + dr.getProductName() + " Address Line 1: " + dr.getAddressLine1() + " Address Line 2: " + dr.getAddressLine2());
+    System.out.println(" [Van driver Notification] " + " Driver Type: " + getDriverType() + " Driver Name: " + getDriverName() + " Shop Name: " + getShopName() + " Customer Name: " + dr.getCustomerName() +
+        " Product Name: " + dr.getProductName() + " Address Line 1: " + dr.getAddressLine1() + " Address Line 2: " + dr.getAddressLine2());
 
-    System.out.println("van driver display");
   }
 
 }

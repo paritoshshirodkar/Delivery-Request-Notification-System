@@ -49,9 +49,9 @@ public class Driver implements ShopObserver, DisplayNotification {
 
   @Override
   public void displayNotification() {
-//    System.out.println(" [Basic Notification] " + " Driver Name: " + getDriverName() + " Shop Name: " + shop.getShopName() + " Customer Name: " + dr.getCustomerName() +
-//        " Product Name: " + dr.getProductName() + " Address Line 1: " + dr.getAddressLine1() + " Address Line 2: " + dr.getAddressLine2());
-    System.out.println("basic display");
+    System.out.println(" [Basic Notification] " + " Driver Name: " + getDriverName() + " Shop Name: " + getShopName() + " Customer Name: " + dr.getCustomerName() +
+        " Product Name: " + dr.getProductName() + " Address Line 1: " + dr.getAddressLine1() + " Address Line 2: " + dr.getAddressLine2());
+
 
   }
 
