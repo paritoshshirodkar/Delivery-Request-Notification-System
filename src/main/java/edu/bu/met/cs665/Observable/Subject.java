@@ -16,7 +16,7 @@ public interface Subject {
   public void registerObserver(ShopObserver o);
 
   /**
-   * remove an observer from our observer list.
+   * Remove an observer from our observer list.
    *
    * @param o
    */
