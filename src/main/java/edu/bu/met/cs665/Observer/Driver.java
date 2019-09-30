@@ -3,11 +3,14 @@ package edu.bu.met.cs665.Observer;
 import edu.bu.met.cs665.Observable.DeliveryRequest;
 import edu.bu.met.cs665.Observable.Shop;
 import java.util.List;
+import org.apache.log4j.Logger;
 
 /**
  * This class represents a single driver.
  */
 public class Driver implements ShopObserver, DisplayNotification {
+
+  private static Logger driverLogger = Logger.getLogger(Driver.class);
 
   private String driverName;
   protected String shopName;
@@ -46,7 +49,7 @@ public class Driver implements ShopObserver, DisplayNotification {
 
   @Override
   public void displayNotification() {
-    System.out.println("\n [Basic Notification] " + "\n Driver Name: " + getDriverName() + "\n Shop Name: " + getShopName() + "\n Customer Name: " + dr.getCustomerName() +
+    driverLogger.info("\n [Basic Notification] " + "\n Driver Name: " + getDriverName() + "\n Shop Name: " + getShopName() + "\n Customer Name: " + dr.getCustomerName() +
         "\n Product Name: " + dr.getProductName() + "\n Address Line 1: " + dr.getAddressLine1() + "\n Address Line 2: " + dr.getAddressLine2());
 
 

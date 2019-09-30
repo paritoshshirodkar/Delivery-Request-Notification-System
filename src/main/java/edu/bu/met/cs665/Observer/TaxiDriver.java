@@ -1,9 +1,13 @@
 package edu.bu.met.cs665.Observer;
 
+import org.apache.log4j.Logger;
+
 /**
  * This class represents a single taxi driver.
  */
 public class TaxiDriver extends Driver {
+
+  private static Logger taxiDriverLogger = Logger.getLogger(TaxiDriver.class);
 
   private String driverType;
 
@@ -34,7 +38,7 @@ public class TaxiDriver extends Driver {
 
   @Override
   public void displayNotification() {
-    System.out.println("\n [Taxi Driver Notification] " + "\n Driver Type: " + getDriverType() + "\n Driver Name: " + getDriverName() + "\n Shop Name: " + getShopName() + "\n Customer Name: " + dr.getCustomerName() +
+    taxiDriverLogger.info("\n [Taxi Driver Notification] " + "\n Driver Type: " + getDriverType() + "\n Driver Name: " + getDriverName() + "\n Shop Name: " + getShopName() + "\n Customer Name: " + dr.getCustomerName() +
         "\n Product Name: " + dr.getProductName() + "\n Address Line 1: " + dr.getAddressLine1() + "\n Address Line 2: " + dr.getAddressLine2());
 
 

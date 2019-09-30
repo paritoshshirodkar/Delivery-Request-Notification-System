@@ -13,6 +13,7 @@ import org.apache.log4j.Logger;
 // import org.apache.log4j.PropertyConfigurator;
 
 import edu.bu.met.cs665.*;
+import org.apache.log4j.PropertyConfigurator;
 
 
 public class Main {
@@ -29,7 +30,7 @@ public class Main {
 
     // This configuration is for setting up the log4j properties file.
     // It is better to set this using java program arguments.
-    // PropertyConfigurator.configure("log4j.properties");
+    PropertyConfigurator.configure("log4j.properties");
 
 //    // Let us create an object of the Main class.
 //    Main m = new Main();
@@ -49,20 +50,22 @@ public class Main {
     ShopObserver vd2 = new VanDriver("vd2");
     ShopObserver td1 = new TaxiDriver("td1");
     ShopObserver td2 = new TaxiDriver("td2");
+    ShopObserver td3 = new TaxiDriver("td3");
 
     centralSystem.registerObserver(vd1);
     centralSystem.registerObserver(vd2);
     centralSystem.registerObserver(td1);
     centralSystem.registerObserver(td2);
+    centralSystem.registerObserver(td3);
+
 
     DeliveryRequest ddr1 = new DeliveryRequest("Paritosh", "Book", "Comm. Ave.", "Boston");
-    DeliveryRequest ddr2 = new DeliveryRequest("Paritosh", "T-Shirt", "Comm. Ave.", "Boston");
+    DeliveryRequest ddr2 = new DeliveryRequest("Tom", "T-Shirt", "Comm. Ave.", "Boston");
 
 
     Shop s1 = new Shop("Barnes and Nobel", ddr1);
-    Shop s2 = new Shop("CVS", ddr2);
+    Shop s2 = new Shop("Nike", ddr2);
 
-    //DeliveryRequest ddr3 = new DeliveryRequest("Paritosh", "Jacket", "Comm. Ave.", "Boston");
 
     centralSystem.setData(s1);
     centralSystem.setData(s2);
