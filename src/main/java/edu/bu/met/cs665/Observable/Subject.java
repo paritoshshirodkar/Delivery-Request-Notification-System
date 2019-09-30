@@ -10,14 +10,12 @@ public interface Subject {
 
   /**
    * Register an observer to our list of observers.
-   *
    * @param o the observer object
    */
   public void registerObserver(ShopObserver o);
 
   /**
    * Remove an observer from our observer list.
-   *
    * @param o
    */
   public void removeObserver(ShopObserver o);

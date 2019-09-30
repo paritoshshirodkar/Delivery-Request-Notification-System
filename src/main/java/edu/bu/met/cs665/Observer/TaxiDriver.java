@@ -17,7 +17,6 @@ public class TaxiDriver extends Driver {
 
   /**
    * Getter method for type of the driver.
-   *
    * @return type of the driver
    */
   public String getDriverType() {
@@ -35,8 +34,8 @@ public class TaxiDriver extends Driver {
 
   @Override
   public void displayNotification() {
-    System.out.println(" [Taxi driver Notification] " + " Driver Type: " + getDriverType() + " Driver Name: " + getDriverName() + " Shop Name: " + getShopName() + " Customer Name: " + dr.getCustomerName() +
-        " Product Name: " + dr.getProductName() + " Address Line 1: " + dr.getAddressLine1() + " Address Line 2: " + dr.getAddressLine2());
+    System.out.println("\n [Taxi Driver Notification] " + "\n Driver Type: " + getDriverType() + "\n Driver Name: " + getDriverName() + "\n Shop Name: " + getShopName() + "\n Customer Name: " + dr.getCustomerName() +
+        "\n Product Name: " + dr.getProductName() + "\n Address Line 1: " + dr.getAddressLine1() + "\n Address Line 2: " + dr.getAddressLine2());
 
 
   }

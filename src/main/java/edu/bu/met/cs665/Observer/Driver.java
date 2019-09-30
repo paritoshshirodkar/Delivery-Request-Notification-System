@@ -20,9 +20,7 @@ public class Driver implements ShopObserver, DisplayNotification {
 
   /**
    * Creates a driver object based on attributes.
-   *
    * @param driverName name of the driver
-   *
    */
   public Driver(String driverName) {
     this.driverName = driverName;
@@ -31,7 +29,6 @@ public class Driver implements ShopObserver, DisplayNotification {
 
   /**
    * Getter method for name of the driver.
-   *
    * @return name of the driver
    */
   public String getDriverName() {
@@ -49,8 +46,8 @@ public class Driver implements ShopObserver, DisplayNotification {
 
   @Override
   public void displayNotification() {
-    System.out.println(" [Basic Notification] " + " Driver Name: " + getDriverName() + " Shop Name: " + getShopName() + " Customer Name: " + dr.getCustomerName() +
-        " Product Name: " + dr.getProductName() + " Address Line 1: " + dr.getAddressLine1() + " Address Line 2: " + dr.getAddressLine2());
+    System.out.println("\n [Basic Notification] " + "\n Driver Name: " + getDriverName() + "\n Shop Name: " + getShopName() + "\n Customer Name: " + dr.getCustomerName() +
+        "\n Product Name: " + dr.getProductName() + "\n Address Line 1: " + dr.getAddressLine1() + "\n Address Line 2: " + dr.getAddressLine2());
 
 
   }
@@ -66,18 +63,32 @@ public class Driver implements ShopObserver, DisplayNotification {
   }
 
 
+  /**
+   * Getter method for the name of the shop.
+   * @return name of the shop
+   */
   public String getShopName() {
     return shopName;
   }
 
+  /**
+   * @param shopName name of the shop
+   */
   public void setShopName(String shopName) {
     this.shopName = shopName;
   }
 
+  /**
+   * Getter method for the delivery request.
+   * @return delivery request
+   */
   public DeliveryRequest getDr() {
     return dr;
   }
 
+  /**
+   * @param dr delivery request
+   */
   public void setDr(DeliveryRequest dr) {
     this.dr = dr;
   }
