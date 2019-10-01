@@ -52,9 +52,12 @@ public class Driver implements ShopObserver, DisplayNotification {
 
   @Override
   public void displayNotification() {
-    driverLogger.info("\n [Basic Notification] " + "\n Driver Name: " + getDriverName() + "\n Shop Name: " + getShopName()
-        + "\n Customer Name: " + dr.getCustomerName() + "\n Product Name: " + dr.getProductName()
-        + "\n Address Line 1: " + dr.getAddressLine1() + "\n Address Line 2: " + dr.getAddressLine2());
+    driverLogger.info("\n [Basic Notification] " + "\n Driver Name: "
+        + getDriverName() + "\n Shop Name: " + getShopName()
+        + "\n Customer Name: " + dr.getCustomerName()
+        + "\n Product Name: " + dr.getProductName()
+        + "\n Address Line 1: " + dr.getAddressLine1()
+        + "\n Address Line 2: " + dr.getAddressLine2());
 
 
   }

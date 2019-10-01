@@ -16,7 +16,7 @@ public interface Subject {
 
   /**
    * Remove an observer from our observer list.
-   * @param o
+   * @param o the observer object
    */
   public void removeObserver(ShopObserver o);
 

@@ -39,9 +39,14 @@ public class TaxiDriver extends Driver {
 
   @Override
   public void displayNotification() {
-    taxiDriverLogger.info("\n [Taxi Driver Notification] " + "\n Driver Type: " + getDriverType() + "\n Driver Name: " + getDriverName()
-        + "\n Shop Name: " + getShopName() + "\n Customer Name: " + dr.getCustomerName()
-        + "\n Product Name: " + dr.getProductName() + "\n Address Line 1: " + dr.getAddressLine1() + "\n Address Line 2: " + dr.getAddressLine2());
+    taxiDriverLogger.info("\n [Taxi Driver Notification] "
+        + "\n Driver Type: " + getDriverType()
+        + "\n Driver Name: " + getDriverName()
+        + "\n Shop Name: " + getShopName()
+        + "\n Customer Name: " + dr.getCustomerName()
+        + "\n Product Name: " + dr.getProductName()
+        + "\n Address Line 1: " + dr.getAddressLine1()
+        + "\n Address Line 2: " + dr.getAddressLine2());
 
 
   }
