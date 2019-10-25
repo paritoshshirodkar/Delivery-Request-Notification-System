@@ -1,7 +1,7 @@
 # Implementation Description
 
 #### Observer Pattern
-For this assignment I have used the Observer Pattern. Since the main task was to update all types of Drivers i.e. Taxi and Van Drivers with the Delivery Request, this pattern seemed the most appropriate. Here, the Subject is the delivery request at the shop and the different type of Drivers are the Observers.
+For this project I have used the Observer Pattern. Since the main task was to update all types of Drivers i.e. Taxi and Van Drivers with the Delivery Request, this pattern seemed the most appropriate. Here, the Subject is the delivery request at the shop and the different type of Drivers are the Observers.
 
 For simplicity I have separated the classes and interfaces into two packages - Observable and Observer. 
 
@@ -45,11 +45,6 @@ Most instance variables have well defined Getters and Setters hence they can be 
 Hence there was no need to re-write the code.
 
 
-
-
-# Project Template
-
-This is a Java Maven Project Template
 
 
 # How to compile the project
